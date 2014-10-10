@@ -1,0 +1,70 @@
+---
+title: Minnesanteckningar från Grupparbete 2
+author: Love Hansson
+date: '2014-10-07'
+output: html_document
+tags: 
+  - Pensionsyndigheten
+  - Analysavdelningen
+  - vpdagarna
+runtime: shiny
+---
+
+
+### Gruppdeltagare
+
+Pedalgruppen:
+
+- Ingemar
+- Pao Lin
+- Kalle
+- Hanna KR
+- Karin
+- Hanna L
+- Alexander
+- Marcus
+- Christer
+- Mikael
+- Love
+- Ole
+
+
+### Förvaltningsbarhet
+
+Skillnader i arbetssätt mellan de olika arbetslagen i gruppen. Detta innebär att utmaningarna för förvaltningsbarhet, rutiner, dokumentation ser olika ut.
+
+- Dataförädlarteamet har utvecklat en kodstandard för R, versionshanterar så gott som all kod i Stash (och i vissa fall på GitHub), och har flera metoder för produktionssättning. Dokumentation sker oftast i JIRA-ärenden med kompletterande kodkommentarer.
+- Utvecklarteamet har en kodstandard för SAS DI Studio men den används inte alltid. Versionshantering sker via backuper. Dokumentation sker i kod, eller i Pedal-dokumentation (Office-baserad).
+- Det fins ett behov av fördjupad kommunikation mellan dessa grupper för att skapa en bättre samsyn om standarder, rutiner, förhållningsregler, plattformsval. Detta är en nyckelfaktor för att uppnå god förvaltningsbarhet.
+
+
+### Arbetsformer
+
+Pedalgruppens tisdagsmöten fungerar bra som grundläggande informationsutbyte om vad som händer i gruppen. Men dessa bör kompletteras med tillfällen för diskussion. Kanske kan tisdagsmötet förlängas med en stående seminariepunkt, alltså typ på formen "30 minuter för kort dragning + diskussion" eller liknande.
+
+Arbetet med dokumentation är ett kärt problembarn som vi ofta återkommer till. Kanske behöver vi arbeta mer med dokumentation som social process? Med detta menas att dokumentation skapas i samarbete mellan flera kodare.
+
+Har vi en vision i Pedalgruppen? Förmodligen inte. En målsättning och en vision/framtidsbild för gruppens arbete skulle behöva sättas upp.
+
+
+### Samverkan med IT-avdelningen
+
+Vår verksamhet är teknikberoende och har ett fortsatt mycket stort behov av välfungerande relationer med IT-avdelningen. Samverkan på personnivå fungerar mycket ofta, men ibland är långa leveranstider ett stort problem. Samtidigt finns en bild på IT-avdelningen att vi ofta förväntar oss att IT ska släppa allt de har för händer för att hjälpa oss trots att de har en planeringshorisont som ofta sträcker sig flera månader framåt i tiden. Vi har börjat samla in information om IT-incidenter för att hjälpa IT bli en bättre leverantör och oss själva att bli bättre beställare.
+
+Ibland tycks problem härröra från myndighetens vägval för upphandlingar - kan vi i något sammanhang lyfta frågan om ifall våra rutiner för upphandling/inköp av mjuk- och hårdvara bör förändras? Annars riskerar vi situationer där vi vet vad vi vill ha, berörda beställare på IT är helt införstådda, men en leverans fördröjs pga krångel med någon underleverantör.
+
+
+### Dataproduktion
+
+Resurskonflikt mellan intern utveckling i Pedal, avveckling av STORE, anpassning till BÄR, och dokumentation.
+
+Behov av snara beslut inom vägvalsfrågor vad gäller verktyg och arkitektur.
+
+
+
+
+
+
+
+
+

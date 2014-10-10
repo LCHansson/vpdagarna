@@ -1,0 +1,59 @@
+---
+title: "Vp-dagarna: Inledning och bakgrund"
+author: Love Hansson
+date: '2014-10-07'
+output: html_document
+tags: 
+  - Pensionsyndigheten
+  - Analysavdelningen
+  - vpdagarna
+runtime: shiny
+---
+
+### Recap från vp-dagarna 2013
+
+Vi hade precis genomgått en sammanslagning av personal från flera olika enheter och avdelningar till den nybildade Analysavdelningen, vilket präglade diskussionerna och organisationens fokus. En ny organisationsstruktur, kulturella skillnader och en ny förvaltningsorganisation gjorde att arbetet med verksamhetsplanering var något trevande.
+
+Resultatet av dagarna var en lista på femton punkter som betraktades som våra huvudleveranser för 2014. En stor del, kanske 50%, av dessa punkter är ännu inte levererade. Vad gjorde vi istället?
+
+Svaret är att vi levererat flera viktiga produkter under året som syns utåt, alltså som når slutanvändarna, t.ex. Typfallsmodellen och Orange Rapport 2013. Men även att vi fokuserat på att etablera en stark teknisk basplattform i form av teknisk plattform för PEDAL, datafångst av rådata från Försäkringskassan, avskaffande av Asta, förvaltnings, Shiny-server, Atlassian-plattformen, webb etc. Förmodan och förhoppningen är att detta arbete ska löna sig framöver i form av bättre och mer synliga analyser, visualiseringar, rapporter, en ny webbplattform för statistikpresentation, etc.
+
+### Nästa steg
+
+- Konkret tidplan för avveckling av STORE-beroenden
+- Plattform för extern statistikpresentation
+- Analysplattform för intern statistikbearbetning och -presentation
+- Öppna data?
+- Publicering av mer kod på GitHub
+- Medverkan i HackForSweden 2015/2016?
+
+### Omvärlden
+
+- Ny departementschef, ny regering
+- PFÄ: Största förändringarna hittills i produktionsstatistiken. Automatisering av flera processer och centralisering av alla handläggningsprocesser till K2 (K3?)
+- Fokus från ägare och styrelse på olika typer av prognosverksamhet (etc.)
+- Konsumentuppdraget
+
+### Planeringshorisont
+
+Enligt den resursberäkning som gjorts inför vp-dagarna har vi ca 9 årsarbeten kvar att planera fritt kring. Ca 20 000 timmar är redan uppberäknade i kategorin löpande arbete, och runt 18 000 timmar är inplanerade för redan resurssatta aktiviteter som inte räknas till de löpande aktiviteterna.
+
+```{r,echo=FALSE,message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+
+data = data.frame(Aktivitet = c("Löpande arbete", "Redan resurssatta aktiviteter", "Fria resurser")) %>%
+  mutate(Resurser = c(20000, 18000, 15000),
+         Arsarbeten = Resurser / 1600
+  )
+
+ggplot(data = data, aes(x = Aktivitet)) +
+  geom_bar(aes(y = Resurser, fill = Resurser), stat = "identity") +
+  geom_text(aes(label = paste(Arsarbeten, "ÅA"), y = Resurser + 1000)) +
+  theme_minimal() +
+  xlab('Aktivitetstyp') + ylab('Tidsåtgång (timmar)')
+
+```
+
+<small><em>Resursfördelning på Analysavdelningen under 2015</em></small>

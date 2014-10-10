@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the pre-run script.\n# All code put in here is run once, at startup.\n\n\n# Website variables\nweb_title = 'VP-dagarna 2014'\nfooter_text = \"Generated with <a href='https://github.com/lchansson/braceana'>Braceana</a>, a markdown-based CMS written by <a href='https://github.com/lchansson'>Love Hansson</a>, 2014. Built using <a href='http://shiny.rstudio.com'>Shiny</a>. Framework licensed under the <a href='http://www.gnu.org/licenses/agpl-3.0.html'>AGPL v3</a>.\"\nblog_name = 'Anteckningar'\n\nblog_path = 'blog'\npages_path = 'pages'\n\n# Run options\noptions(\"shiny.launch.browser\" = TRUE)\noptions(shiny.reactlog = TRUE)\n\n# Source functions\nsourceFiles <- list.files(file.path(getwd(), 'app/functions'), full.names = TRUE)\nfor (sourceFile in sourceFiles)\n     source(sourceFile)\n\nwidgets <- list.files(file.path(getwd(), 'app/widgets'), full.names = TRUE)\nfor (widget in widgets)\n  source(widget)\n\n\n# Functions to run\nknitAllRmd(folder = c(blog_path, pages_path), recompile = TRUE)\n",
+    "created" : 1412756340106.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "968811253",
+    "id" : "3C687514",
+    "lastKnownWriteTime" : 1412682907,
+    "path" : "~/dev/published_braceana_sites/vpdagarna/global.R",
+    "project_path" : "global.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,40 @@
+---
+title: "Osäkerhetsscenarier"
+author: "Love Hansson"
+date: "2014-10-01"
+output: html_document
+tags:
+- Pensionsyndigheten
+- Utvecklingsrådet
+- Halmstad
+runtime: shiny
+---
+
+```{r, echo = FALSE}
+library(dplyr)
+timeline <- data.frame(
+  year = rep(2015:2030, 4) %>% sort,
+  quarter = rep(1:4, 16)
+  ) %>%
+  tbl_df %>%
+  mutate(time = paste0(year, "-", quarter))
+
+event_data <- data.frame(
+  event = character(),
+  impact = numeric(),
+  time = character(),
+  product = character()
+  )
+
+event_data <- event_data %>% rbind(list(
+  event = "Fullständig prognos på webben",
+  impact = 3,
+  time = "2015-3",
+  product_segment = "Pensionsprognoser"))
+
+plotdata <- timeline %>% left_join(event_data, by = "time")
+
+p <- ggplot(plotdata[!is.na(plotdata$impact),], aes(x = year, y = quarter, size = impact)) + geom_point(color = 'red')
+print(p)
+
+```

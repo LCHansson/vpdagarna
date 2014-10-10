@@ -1,0 +1,12 @@
+---
+output: html_document
+runtime: shiny
+---
+
+<br/><br/><br/>
+
+# VP-dagarna 2014
+
+<br/><center>En rapport i CMS-form från Analysavdelningens verksamhetsplanering på Djurönäset 7-8 oktober 2014</center>
+
+<br/>Denna sida är skapad som en teknikdemo av [Braceana](http://github.com/lchansson/braceana), ett CMS för snabb pubicering av markdownbaserade texter och analyser skrivna i markdown och/eller R.

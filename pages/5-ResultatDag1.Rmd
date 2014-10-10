@@ -1,0 +1,26 @@
+---
+title: Resultat, Grupparbete 1
+output: html_document
+tags: 
+  - Pensionsyndigheten
+  - Analysavdelningen
+  - vpdagarna
+runtime: shiny
+---
+
+Nedanståeende tabell är resultatet av de diskussioner som fördes i grupp 4 under dag 1.
+
+```{r, echo=FALSE, message=FALSE, results = 'asis'}
+library(xtable)
+library(stringr)
+data <- read.csv("../data/gr1.csv", sep = ";", fileEncoding = "ISO8859-1", row.names = NULL)
+
+print(xtable(
+  data),
+  type = "html",
+  include.rownames = FALSE,
+  sanitize.colnames.function = function(x) { str_replace_all(x, "\\.", " ") },
+  html.table.attributes = list("border=1")
+  )
+
+```

@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle: \"Vp-dagarna: Inledning och bakgrund\"\nauthor: Love Hansson\ndate: '2014-10-07'\noutput: html_document\ntags: \n  - Pensionsyndigheten\n  - Analysavdelningen\n  - vpdagarna\nruntime: shiny\n---\n\n### Recap från vp-dagarna 2013\n\nVi hade precis genomgått en sammanslagning av personal från flera olika enheter och avdelningar till den nybildade Analysavdelningen, vilket präglade diskussionerna och organisationens fokus. En ny organisationsstruktur, kulturella skillnader och en ny förvaltningsorganisation gjorde att arbetet med verksamhetsplanering var något trevande.\n\nResultatet av dagarna var en lista på femton punkter som betraktades som våra huvudleveranser för 2014. En stor del, kanske 50%, av dessa punkter är ännu inte levererade. Vad gjorde vi istället?\n\nSvaret är att vi levererat flera viktiga produkter under året som syns utåt, alltså som når slutanvändarna, t.ex. Typfallsmodellen och Orange Rapport 2013. Men även att vi fokuserat på att etablera en stark teknisk basplattform i form av teknisk plattform för PEDAL, datafångst av rådata från Försäkringskassan, avskaffande av Asta, förvaltnings, Shiny-server, Atlassian-plattformen, webb etc. Förmodan och förhoppningen är att detta arbete ska löna sig framöver i form av bättre och mer synliga analyser, visualiseringar, rapporter, en ny webbplattform för statistikpresentation, etc.\n\n### Nästa steg\n\n- Konkret tidplan för avveckling av STORE-beroenden\n- Plattform för extern statistikpresentation\n- Analysplattform för intern statistikbearbetning och -presentation\n- Öppna data?\n- Publicering av mer kod på GitHub\n- Medverkan i HackForSweden 2015/2016?\n\n### Omvärlden\n\n- Ny departementschef, ny regering\n- PFÄ: Största förändringarna hittills i produktionsstatistiken. Automatisering av flera processer och centralisering av alla handläggningsprocesser till K2 (K3?)\n- Fokus från ägare och styrelse på olika typer av prognosverksamhet (etc.)\n- Konsumentuppdraget\n\n### Planeringshorisont\n\nEnligt den resursberäkning som gjorts inför vp-dagarna har vi ca 9 årsarbeten kvar att planera fritt kring. Ca 20 000 timmar är redan uppberäknade i kategorin löpande arbete, och runt 18 000 timmar är inplanerade för redan resurssatta aktiviteter som inte räknas till de löpande aktiviteterna.\n\n```{r,echo=FALSE,message=FALSE}\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(ggthemes)\n\ndata = data.frame(Aktivitet = c(\"Löpande arbete\", \"Redan resurssatta aktiviteter\", \"Fria resurser\")) %>%\n  mutate(Resurser = c(20000, 18000, 15000),\n         Arsarbeten = Resurser / 1600\n  )\n\nggplot(data = data, aes(x = Aktivitet)) +\n  geom_bar(aes(y = Resurser, fill = Resurser), stat = \"identity\") +\n  geom_text(aes(label = paste(Arsarbeten, \"ÅA\"), y = Resurser + 1000)) +\n  theme_minimal() +\n  xlab('Aktivitetstyp') + ylab('Tidsåtgång (timmar)')\n\n```\n\n<small><em>Resursfördelning på Analysavdelningen under 2015</em></small>",
+    "created" : 1412886381955.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "188832958",
+    "id" : "1BBF0352",
+    "lastKnownWriteTime" : 1412685956,
+    "path" : "~/dev/published_braceana_sites/vpdagarna/pages/2-Bakgrund.Rmd",
+    "project_path" : "pages/2-Bakgrund.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

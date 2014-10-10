@@ -1,0 +1,16 @@
+{
+    "contents" : "---\noutput: html_document\nruntime: shiny\n---\n\n<br/><br/><br/>\n\n# VP-dagarna 2014\n\n<br/><center>En rapport i CMS-form från Analysavdelningens verksamhetsplanering på Djurönäset 7-8 oktober 2014</center>\n\n<br/>Denna sida är skapad som en teknikdemo av [Braceana](http://github.com/lchansson/braceana), ett CMS för snabb pubicering av markdownbaserade texter och analyser skrivna i markdown och/eller R.",
+    "created" : 1412886380599.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2860969145",
+    "id" : "DB19DC69",
+    "lastKnownWriteTime" : 1412683310,
+    "path" : "~/dev/published_braceana_sites/vpdagarna/pages/1-Start.Rmd",
+    "project_path" : "pages/1-Start.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

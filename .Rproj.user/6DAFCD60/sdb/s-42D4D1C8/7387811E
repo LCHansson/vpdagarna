@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle: Resultat, Grupparbete 1\noutput: html_document\ntags: \n  - Pensionsyndigheten\n  - Analysavdelningen\n  - vpdagarna\nruntime: shiny\n---\n\nNedanståeende tabell är resultatet av de diskussioner som fördes i grupp 4 under dag 1.\n\n```{r, echo=FALSE, message=FALSE, results = 'asis'}\nlibrary(xtable)\nlibrary(stringr)\ndata <- read.csv(\"../data/gr1.csv\", sep = \";\", fileEncoding = \"ISO8859-1\", row.names = NULL)\n\nprint(xtable(\n  data),\n  type = \"html\",\n  include.rownames = FALSE,\n  sanitize.colnames.function = function(x) { str_replace_all(x, \"\\\\.\", \" \") },\n  html.table.attributes = list(\"border=1\")\n  )\n\n```",
+    "created" : 1412718832747.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4272506318",
+    "id" : "7387811E",
+    "lastKnownWriteTime" : 1412718862,
+    "path" : "~/dev/published_braceana_sites/vpdagarna/pages/5-ResultatDag1.Rmd",
+    "project_path" : "pages/5-ResultatDag1.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

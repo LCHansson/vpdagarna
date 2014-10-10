@@ -1,0 +1,47 @@
+---
+title: Minnesanteckningar från Grupparbete 1
+author: Love Hansson
+date: '2014-10-07'
+output: html_document
+tags: 
+  - Pensionsyndigheten
+  - Analysavdelningen
+  - vpdagarna
+runtime: shiny
+---
+
+### Gruppdeltagare
+
+- Karin
+- Lars B
+- Lars O
+- Niklas
+- Hans K
+- Mikael
+- Love
+
+## Konsumentuppdraget: Vår målbild
+
+![Vuxna Tomas](http://vuxnatomas.files.wordpress.com/2013/03/fc3a5r-orange-post.jpg)
+
+
+## Målarbete
+
+<strong>Bostadstillägg</strong>: Vi har levererat, och fortsätter leverera, data till BTY-projektet och andra projekt kopplade till BT-processen.
+
+<strong>Kvalitetskontrollerna</strong>: Leverera stöd för metodutveckling til VoK-arbetet. Kontrollerna som görs har ofta flera distinkt olika syften, vilket gör resultaten svårtolkade. Vi kan även leverera granskning av resultaten av kontrollerna.
+
+<strong>Kostnadseffektivitet</strong>: Analysavdelningens effektiviseringsarbete är starkt kopplat till automatiseringar av löpande uppgifter samt översyn över om det finns gamla löpande rapporter som produceras idag som kan tas bort i framtiden.
+
+Automatiseringar rör t.ex. kvalitetskontroller av gamla rapporter, årsstatistiken, templating för statistikrapporter etc.
+
+<strong>Skapa mervärde i kontakter</strong>: Pensionsmodellen och typfallsmodellen som beslutsstöd för pensionsrelaterade beslut (för "avancerade pensionssparare/-planerare"). Utveckling av Pensionsprognosen på t.ex. MiP som belsutsstöd för "mindre" avancerade pensionssparare.
+
+<strong>Konsumentupplysning och samverkan med andra aktörer</strong>: Vårt bidrag kan göras mot institutionella aktörer. Samla tjänstepensionsinformation och information om den allmänna pensionen på ett ställe för att kunna svara på fler frågor rörande pensionärers hela inkomstsituation.
+
+Ibland dyker frågor om "varför vi räknar som vi gör" upp vid vissa komplexa fall, t.ex. varför pensionärer med efterlevandeskydd inte får höjd pension om deras maka/make dör, men däremot om de skiljer sig. Bromsen är ett annat exempel. Här kan vi göra ett bättre jobb med att ta fram en budskapsmanual som publiceras på externwebben, eller delges kommunikations- och produktionsavdelningarna. Dessutom är den FAQ och övrig info som finns på hemsidan ofta riktigt uselt skriven och delvis rent felaktig och/eller motsägelsefull. Här skulle vi kunna göra ett jobb med faktagranskaning.
+
+<strong>Finansiella produkter</strong>: Ska vi ta ett starkare ansvar gentemot konsumenter eller institutionella aktörer för att kvalitetsgranska de produkter som finns på den privata marknaden, t.ex. olika strukturerade produkter?
+
+<strong>Kompetensförsörjning</strong>: I de fall vi behöver bredda vår kompetens rör det sig i vårt fall framförallt om att ta in ytterligare expertkompetens ifall vi behöver arbeta med något område där vi ännu saknar kompetens. En kompetensbreddning på avdelningen är inte aktuell.
+
