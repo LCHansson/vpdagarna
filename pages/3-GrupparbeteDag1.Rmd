@@ -20,10 +20,6 @@ runtime: shiny
 - Mikael
 - Love
 
-## Konsumentuppdraget: Vår målbild
-
-![Vuxna Tomas](http://vuxnatomas.files.wordpress.com/2013/03/fc3a5r-orange-post.jpg)
-
 
 ## Målarbete
 

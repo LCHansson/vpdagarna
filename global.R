@@ -1,29 +1,40 @@
 
-# This is the pre-run script.
+# This is the pre-run script. Here you can edit basic properties of your site such as
+# the title, footer, or paths to different content directories.
+#
 # All code put in here is run once, at startup.
+#
+# (C) Love Hansson, 2014. Licensed under the AGPL v3.
+#
+# https://github.com/LCHansson/braceana
+# 
+# Built using Shiny, an R library by RStudio, Inc. Heads up!
 
 
-# Website variables
-web_title = 'VP-dagarna 2014'
-footer_text = "Generated with <a href='https://github.com/lchansson/braceana'>Braceana</a>, a markdown-based CMS written by <a href='https://github.com/lchansson'>Love Hansson</a>, 2014. Built using <a href='http://shiny.rstudio.com'>Shiny</a>. Framework licensed under the <a href='http://www.gnu.org/licenses/agpl-3.0.html'>AGPL v3</a>."
-blog_name = 'Anteckningar'
+
+## Website variables ----
+# These are content parameters for your website.
+web_title = 'Braceana'
+footer_text = "Generated with <a href='https://github.com/lchansson/braceana'>Braceana</a>, a markdown-based CMS written by <a href='https://github.com/lchansson'>LCHansson</a>, 2014. Built using <a href='http://shiny.rstudio.com'>Shiny</a>. Framework licensed under the <a href='http://www.gnu.org/licenses/agpl-3.0.html'>AGPL v3</a>."
+blog_name = 'Blogg'
 
 blog_path = 'blog'
 pages_path = 'pages'
 
-# Run options
-options("shiny.launch.browser" = TRUE)
-options(shiny.reactlog = TRUE)
 
-# Source functions
-sourceFiles <- list.files(file.path(getwd(), 'app/functions'), full.names = TRUE)
-for (sourceFile in sourceFiles)
+##
+## Don't change any code below this line if you don't know what you're doing. ##
+##
+
+## Set run options ----
+options("shiny.launch.browser" = TRUE)
+options(shiny.reactlog = FALSE)
+
+## Include custom widgets and libraries ----
+files <- c('app/functions', 'app/widgets')
+
+for (sourceFile in list.files(file.path(getwd(), files), full.names = TRUE))
      source(sourceFile)
 
-widgets <- list.files(file.path(getwd(), 'app/widgets'), full.names = TRUE)
-for (widget in widgets)
-  source(widget)
-
-
-# Functions to run
+## Functions to run at startup ----
 knitAllRmd(folder = c(blog_path, pages_path), recompile = TRUE)

@@ -4,6 +4,13 @@
 # server.R basically works as a backend, but is also used to dynamically generate
 # content. To edit the look and feel of the application, edit the section labeled
 # CONTENT GENERATION below.
+#
+# (C) Love Hansson, 2014. Licensed under the AGPL v3.
+#
+# https://github.com/LCHansson/braceana
+# 
+# Built using Shiny, an R library by RStudio, Inc. Heads up!
+
 
 library(shiny)
 library(dplyr)
@@ -23,13 +30,6 @@ shinyServer(function (input, output, session) {
   
   ## CONTENT GENERATION ----
   output$navbar <- renderUI({
-    pages_files <- Filter(
-      function (x) str_detect(x, "[\\.]html$"),
-      list.files(file.path(getwd(), pages_path),
-                 full.names = TRUE)
-    )
-    blog_present <- ( length(list.files(blog_path)) > 0 )
-    
     ## Basic page metaelements ----
     barebone_page <- tagList(
       title = web_title,
@@ -40,11 +40,18 @@ shinyServer(function (input, output, session) {
     )
     
     ## Pages ----
+    # List all pages
+    pages_files <- Filter(
+      function (x) str_detect(x, "[\\.]html$"),
+      list.files(file.path(getwd(), 'app/html/pages'),
+                 full.names = TRUE)
+    )
+    
     # Generate a list of tabPanel() each with the contents of one page
     # (in alphabetical order by filename)
     pages <- lapply(pages_files, function (name) {
       
-      # In future, we might want a cleverer strategy for naming
+      # In the future we might want a cleverer strategy for naming
       # and ordering pages, but for now we'll just assume the name of the
       # page source file has a camel cased name in it somewhere.
       nameParts <- str_split(name, "[\\/]")[[1]]
@@ -67,7 +74,10 @@ shinyServer(function (input, output, session) {
     })
     
     ## Blog posts ----
+    # Detect if any blog bosts are present
+    blog_present <- ( length(list.files(file.path(getwd(), 'app/html/blog'))) > 0 )
     
+    # Generate blog posts (in reverse alphabetical order by filename)
     if (blog_present) {
       blog_posts <- list(
         tabPanel(
@@ -108,10 +118,14 @@ shinyServer(function (input, output, session) {
   
   ## Blog post generation ----
   output$blog <- renderUI({
-    files <- Filter(function (x) str_detect(x, "[\\.]html$"), list.files(file.path(getwd(), blog_path), full.names = TRUE))
+    files <- Filter(
+      function (x) str_detect(x, "[\\.]html$"),
+      list.files(
+        file.path(getwd(), 'app/html/blog'),
+        full.names = TRUE)
+    )
     
     blog <- lapply(files, function (p) {
-      # browser()
       tagList(column(
         8, offset = 2,
         includeHTML(p),
